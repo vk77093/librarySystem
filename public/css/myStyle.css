@@ -1,0 +1,9 @@
+.mainSide{
+  background-color: blue;
+}
+.myside{
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 20rem;
+  margin-top: 20rem;
+}
