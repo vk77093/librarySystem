@@ -7,6 +7,10 @@
 <div class="form-group">
   {!!Form::label('title','TITLE:')!!}
   {!!Form::text('title',null,['class'=>'form-control'])!!}
+</div>
+<div class="form-group">
+  {!!Form::label('categories_id','Select category')!!}
+  {!!Form::select('categories_id',array(1=>'Science',0=>'Social'),null,['class'=>'form-control'])!!}
 
 </div>
 {!!Form::close()!!}
