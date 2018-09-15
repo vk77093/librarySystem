@@ -46,15 +46,16 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <a href="#" class="w3-bar-item w3-button">Link</a>
   </div>
 </div> -->
-    <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>&nbsp; Dashboard</a>
+    <a href="" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>&nbsp; Dashboard</a>
 
     <div class="w3-dropdown-hover">
     <button class="w3-button"><i class="fa fa-bank fa-fw"></i>&nbsp;Books Management <i class="fa fa-caret-down"></i></button>
     <div class="w3-dropdown-content w3-bar-block">
-      <a href="#" class="w3-bar-item w3-button">Add Books</a>
-      <a href="#" class="w3-bar-item w3-button">Categories</a>
-      <a href="#" class="w3-bar-item w3-button">Author</a>
-      <a href="#" class="w3-bar-item w3-button">Rack</a>
+      <a href="/books/create" class="w3-bar-item w3-button">Add Books</a>
+      <a href="/bookCategories" class="w3-bar-item w3-button">Categories</a>
+      <a href="/booksAuthor" class="w3-bar-item w3-button">Author</a>
+      <a href="/booksRacks" class="w3-bar-item w3-button">Rack</a>
+      <a href="/booksPublisher" class="w3-bar-item w3-button">Publisher</a>
     </div>
   </div>
 

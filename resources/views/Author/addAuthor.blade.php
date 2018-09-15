@@ -11,7 +11,7 @@
         {!!Form::text('author_name',null,['class'=>'form-control'])!!}
       </div>
       <div class="form-group">
-        {!!Form::submit('Create Category',['class'=>'form-control btn btn-primary'])!!}
+        {!!Form::submit('Create Author',['class'=>'form-control btn btn-primary'])!!}
       </div>
 
       {!!Form::close()!!}
@@ -32,7 +32,7 @@
         @foreach($author as $aut)
         <tr>
           <td>
-            <a href="{{route('booksAuthor.edit',$aut->id)}}">{{$aut->id}}</a>
+<a    href="{{route('booksAuthor.edit',$aut->id)}}">{{$aut->id}}</a>
           </td>
           <td>{{$aut->author_name}}</td>
           <td>{{$aut->created_at ? $aut->created_at->diffForHumans() :'No Date'}}</td>

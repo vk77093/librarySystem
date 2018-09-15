@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Author;
+use App\Publisher;
 
-class BooksAuthorController extends Controller
+class BooksPublisherController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class BooksAuthorController extends Controller
      */
     public function index()
     {
-      $author=Author::all();
-        return view('Author.addAuthor',compact('author'));
+      $publishers=Publisher::all();
+        return view('booksManagementSys.publisher.addPublisher',compact('publishers'));
     }
 
     /**
@@ -35,9 +35,9 @@ class BooksAuthorController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        Author::create($request->all());
-        return redirect('booksAuthor');
+    { 
+Publisher::create($request->all());
+return redirect('booksPublisher');
     }
 
     /**
@@ -48,7 +48,7 @@ class BooksAuthorController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -59,8 +59,8 @@ class BooksAuthorController extends Controller
      */
     public function edit($id)
     {
-        $author=Author::findOrFail($id);
-        return view('Author.edit',compact('author'));
+      $publisher=Publisher::findOrFail($id);
+      return view('booksManagementSys.publisher.edit',compact('publisher'));
     }
 
     /**
@@ -72,9 +72,9 @@ class BooksAuthorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $author=Author::findOrFail($id);
-        $author->update($request->all());
-        return redirect('booksAuthor');
+        $publisher=Publisher::findOrFail($id);
+        $publisher->update($request->all());
+        return redirect('booksPublisher');
     }
 
     /**
@@ -85,8 +85,8 @@ class BooksAuthorController extends Controller
      */
     public function destroy($id)
     {
-        $author=Author::findOrFail($id);
-        $author->delete();
-        return redirect('booksAuthor');
+        $publisher=Publisher::findOrFail($id);
+        $publisher->delete();
+        return redirect('booksPublisher');
     }
 }

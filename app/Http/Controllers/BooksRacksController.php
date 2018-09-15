@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Author;
+use App\Rack;
 
-class BooksAuthorController extends Controller
+class BooksRacksController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class BooksAuthorController extends Controller
      */
     public function index()
     {
-      $author=Author::all();
-        return view('Author.addAuthor',compact('author'));
+      $racks=Rack::all();
+        return view('racks/addRacks',compact('racks'));
     }
 
     /**
@@ -36,8 +36,8 @@ class BooksAuthorController extends Controller
      */
     public function store(Request $request)
     {
-        Author::create($request->all());
-        return redirect('booksAuthor');
+        Rack::create($request->all());
+        return redirect('/booksRacks');
     }
 
     /**
@@ -59,8 +59,8 @@ class BooksAuthorController extends Controller
      */
     public function edit($id)
     {
-        $author=Author::findOrFail($id);
-        return view('Author.edit',compact('author'));
+        $racks=Rack::findOrFail($id);
+      return view('racks/edit',compact('racks'));
     }
 
     /**
@@ -72,9 +72,9 @@ class BooksAuthorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $author=Author::findOrFail($id);
-        $author->update($request->all());
-        return redirect('booksAuthor');
+        $racks=Rack::findOrFail($id);
+        $racks->update($request->all());
+        return redirect('booksRacks');
     }
 
     /**
@@ -85,8 +85,8 @@ class BooksAuthorController extends Controller
      */
     public function destroy($id)
     {
-        $author=Author::findOrFail($id);
-        $author->delete();
-        return redirect('booksAuthor');
+        $racks=Rack::findOrFail($id);
+        $racks->delete();
+        return redirect('booksRacks');
     }
 }
