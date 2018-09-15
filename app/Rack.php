@@ -9,5 +9,7 @@ class Rack extends Model
   protected $fillable=[
     'rack_name',
     'sub_racks',
+    'rows',
+    'cols',
   ];
 }

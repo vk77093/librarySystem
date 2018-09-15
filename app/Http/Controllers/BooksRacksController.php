@@ -15,7 +15,7 @@ class BooksRacksController extends Controller
     public function index()
     {
       $racks=Rack::all();
-        return view('racks/addRacks',compact('racks'));
+        return view('booksManagementSys.racks/addRacks',compact('racks'));
     }
 
     /**
@@ -60,7 +60,7 @@ class BooksRacksController extends Controller
     public function edit($id)
     {
         $racks=Rack::findOrFail($id);
-      return view('racks/edit',compact('racks'));
+      return view('booksManagementSys.racks/edit',compact('racks'));
     }
 
     /**

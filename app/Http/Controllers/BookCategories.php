@@ -15,7 +15,7 @@ class BookCategories extends Controller
     public function index()
     {
       $categories=Categories::all();
-      return view('categories.addCategory',compact('categories'));
+      return view('booksManagementSys.categories.addCategory',compact('categories'));
     }
 
     /**

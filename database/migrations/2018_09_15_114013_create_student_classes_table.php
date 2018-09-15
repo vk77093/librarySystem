@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRacksTable extends Migration
+class CreateStudentClassesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateRacksTable extends Migration
      */
     public function up()
     {
-        Schema::create('racks', function (Blueprint $table) {
+        Schema::create('student_classes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('rack_name')->index();
-            $table->string('sub_racks')->unique();
-            $table->string('rows')->unique()->index();
-            $table->string('cols');
+            $table->string('class_name');
+            $table->string('section_name');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateRacksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('racks');
+        Schema::dropIfExists('student_classes');
     }
 }

@@ -12,6 +12,13 @@
         <br />
         {!!Form::label('sub_racks','Sub Rack Name')!!}
         {!!Form::text('sub_racks',null,['class'=>'form-control'])!!}
+        <br />
+        {!!Form::label('rows','Enter Rack Rows Number:')!!}
+        {!!Form::text('rows',null,['class'=>'form-control'])!!}
+        <br />
+        {!!Form::label('cols','Enter Rack  Cols Name:')!!}
+        {!!Form::text('cols',null,['class'=>'form-control'])!!}
+
         {!!Form::submit('Update Racks',['class'=>'btn btn-primary col-sm-6'])!!}
       </div>
 

@@ -15,7 +15,7 @@ class BooksAuthorController extends Controller
     public function index()
     {
       $author=Author::all();
-        return view('Author.addAuthor',compact('author'));
+        return view('booksManagementSys.Author.addAuthor',compact('author'));
     }
 
     /**

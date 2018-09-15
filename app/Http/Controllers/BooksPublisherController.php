@@ -35,7 +35,7 @@ class BooksPublisherController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    { 
+    {
 Publisher::create($request->all());
 return redirect('booksPublisher');
     }

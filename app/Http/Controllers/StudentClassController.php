@@ -3,13 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Categories;
-use App\Author;
-use App\Publisher;
-use App\Rack;
-use App\Books;
+use App\StudentClass;
 
-class BookController extends Controller
+class StudentClassController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +14,8 @@ class BookController extends Controller
      */
     public function index()
     {
-$books=Books::all();
-        return view('booksManagementSys.booksManagement.index',compact('books'));
+      $stu_class=StudentClass::all();
+        return view('studentManagement/class/classAdd',compact('stu_class'));
     }
 
     /**
@@ -29,11 +25,7 @@ $books=Books::all();
      */
     public function create()
     {
-      $categories=Categories::pluck('cat_name','id')->all();
-    $author=Author::pluck('author_name','id')->all();
-      $racks=Rack::pluck('rack_name','id')->all();
-      $publisher=Publisher::pluck('publisher_name','id')->all();
-      return view('booksManagementSys.booksManagement.addBooks',compact('categories','author','racks','publisher'));
+        //
     }
 
     /**
@@ -44,8 +36,8 @@ $books=Books::all();
      */
     public function store(Request $request)
     {
-        Books::create($request->all());
-        return redirect('books');
+        StudentClass::create($request->all());
+        return redirect('studentClass');
     }
 
     /**

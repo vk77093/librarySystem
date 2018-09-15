@@ -12,9 +12,18 @@
   {!!Form::text('rack_name',null,['class'=>'form-control'])!!}
 </div>
 <div class="form-group">
+  {!!Form::label('rows','Enter Rack Rows Number:')!!}
+  {!!Form::text('rows',null,['class'=>'form-control'])!!}
+</div>
+<div class="form-group">
   {!!Form::label('sub_racks','Enter Sub_Racks')!!}
   {!!Form::text('sub_racks',null,['class'=>'form-control'])!!}
 </div>
+<div class="form-group">
+  {!!Form::label('cols','Enter Rack  Cols Name:')!!}
+  {!!Form::text('cols',null,['class'=>'form-control'])!!}
+</div>
+
 <div class="form-group">
   {!!Form::submit('Create Racks',['class'=>'form-control btn btn-primary'])!!}
 </div>
@@ -29,6 +38,8 @@
       <th>Id</th>
       <th>Racks Name</th>
       <th>Sub Racks</th>
+      <th>Rows</th>
+      <th>Cols</th>
       <th>Created_At</th>
     </tr>
   </thead>
@@ -39,6 +50,8 @@
       <th><a href="{{route('booksRacks.edit',$rack->id)}}">{{$rack->id}}</a></th>
       <th>{{$rack->rack_name}}</th>
       <th>{{$rack->sub_racks}}</th>
+      <th>{{$rack->rows}}</th>
+      <th>{{$rack->cols}}</th>
       <th>{{$rack->created_at ? $rack->created_at->diffForHumans():'No Date'}}</th>
     </tr>
 
