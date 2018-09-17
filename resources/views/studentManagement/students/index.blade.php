@@ -9,6 +9,7 @@
       <th>ID</th>
       <th>Student Name</th>
       <th>Student Class</th>
+      <th>Contact Number</th>
       <th>Created_At</th>
     </tr>
   </thead>
@@ -19,6 +20,7 @@
       <th>{{$student->id}}</th>
   <th>{{$student->StudentName->stu_name}}</th>
       <th>{{$student->stuClass->class_name}}</th>
+      <th>{{$student->contact_number}}</th>
       <th>{{$student->created_at ? $student->created_at->diffForHumans() :'No Date'}}</th>
     </tr>
     @endforeach

@@ -29,3 +29,4 @@ Route::resource('/booksPublisher','BooksPublisherController');
 Route::resource('/studentClass','StudentClassController');
 Route::resource('/studentName','StudentNameController');
 Route::resource('/students','StudentController');
+Route::resource('BookIssue','BookIssueController');
