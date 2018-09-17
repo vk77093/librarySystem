@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Author;
+use App\StudentName;
 
-class BooksAuthorController extends Controller
+class StudentNameController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,9 @@ class BooksAuthorController extends Controller
      */
     public function index()
     {
-      $author=Author::all();
-        return view('booksManagementSys.Author.addAuthor',compact('author'));
+      $stuName=StudentName::all();
+
+        return view('studentManagement.Name.nameAdd',compact('stuName'));
     }
 
     /**
@@ -36,8 +37,8 @@ class BooksAuthorController extends Controller
      */
     public function store(Request $request)
     {
-        Author::create($request->all());
-        return redirect('booksAuthor');
+        StudentName::create($request->all());
+        return redirect('studentName');
     }
 
     /**
@@ -59,8 +60,8 @@ class BooksAuthorController extends Controller
      */
     public function edit($id)
     {
-        $author=Author::findOrFail($id);
-        return view('booksManagementSys.Author.edit',compact('author'));
+        $stuName=StudentName::findOrFail($id);
+        return view('studentManagement.Name.edit',compact('stuName'));
     }
 
     /**
@@ -72,9 +73,9 @@ class BooksAuthorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $author=Author::findOrFail($id);
-        $author->update($request->all());
-        return redirect('booksAuthor');
+      $stuName=StudentName::findOrFail($id);
+      $stuName->update($request->all());
+      return redirect('studentName');
     }
 
     /**
@@ -85,8 +86,8 @@ class BooksAuthorController extends Controller
      */
     public function destroy($id)
     {
-        $author=Author::findOrFail($id);
-        $author->delete();
-        return redirect('booksAuthor');
+        $stuName=StudentName::findOrFail($id);
+        $stuName->delete();
+        return redirect('studentName');
     }
 }

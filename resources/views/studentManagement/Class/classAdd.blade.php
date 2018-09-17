@@ -34,7 +34,7 @@
     @if($stu_class)
     @foreach($stu_class as $class)
     <tr>
-      <td>{{$class->id}}</td>
+      <td><a href="{{route('studentClass.edit',$class->id)}}">{{$class->id}}</a></td>
       <td>{{$class->class_name}}</td>
       <td>{{$class->section_name}}</td>
       <td>{{$class->created_at ? $class->created_at->diffForHumans():'No Date'}}</td>

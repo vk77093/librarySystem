@@ -59,7 +59,8 @@ class StudentClassController extends Controller
      */
     public function edit($id)
     {
-        //
+        $stu_class=StudentClass::findOrFail($id);
+        return view('studentManagement.Class.edit',compact('stu_class'));
     }
 
     /**
@@ -71,7 +72,9 @@ class StudentClassController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $stu_class=StudentClass::findOrFail($id);
+        $stu_class->update($request->all());
+        return redirect('studentClass');
     }
 
     /**
@@ -82,6 +85,8 @@ class StudentClassController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $stu_class=StudentClass::findOrFail($id);
+        $stu_class->delete();
+        return redirect('studentClass');
     }
 }

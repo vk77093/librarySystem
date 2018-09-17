@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Author;
+use App\Student;
+use App\StudentName;
+use App\StudentClass;
 
-class BooksAuthorController extends Controller
+class StudentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +16,8 @@ class BooksAuthorController extends Controller
      */
     public function index()
     {
-      $author=Author::all();
-        return view('booksManagementSys.Author.addAuthor',compact('author'));
+      $students=Student::all();
+        return view('studentManagement.students.index',compact('students'));
     }
 
     /**
@@ -25,7 +27,9 @@ class BooksAuthorController extends Controller
      */
     public function create()
     {
-        //
+        $stuName=StudentName::pluck('stu_name','id')->all();
+        $stuClass=StudentClass::pluck('class_name','id')->all();
+        return view('studentManagement.students.addStudents',compact('stuName','stuClass'));
     }
 
     /**
@@ -36,8 +40,8 @@ class BooksAuthorController extends Controller
      */
     public function store(Request $request)
     {
-        Author::create($request->all());
-        return redirect('booksAuthor');
+        Student::create($request->all());
+        return redirect('students');
     }
 
     /**
@@ -59,8 +63,7 @@ class BooksAuthorController extends Controller
      */
     public function edit($id)
     {
-        $author=Author::findOrFail($id);
-        return view('booksManagementSys.Author.edit',compact('author'));
+        //
     }
 
     /**
@@ -72,9 +75,7 @@ class BooksAuthorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $author=Author::findOrFail($id);
-        $author->update($request->all());
-        return redirect('booksAuthor');
+        //
     }
 
     /**
@@ -85,8 +86,6 @@ class BooksAuthorController extends Controller
      */
     public function destroy($id)
     {
-        $author=Author::findOrFail($id);
-        $author->delete();
-        return redirect('booksAuthor');
+        //
     }
 }

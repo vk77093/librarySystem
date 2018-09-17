@@ -62,9 +62,9 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <div class="w3-dropdown-hover">
   <button class="w3-button"><i class="fa fa-cog fa-fw"></i>&nbsp;Student Management <i class="fa fa-caret-down"></i></button>
   <div class="w3-dropdown-content w3-bar-block">
-    <a href="#" class="w3-bar-item w3-button">Add Students</a>
+    <a href="/students/create" class="w3-bar-item w3-button">Add Students</a>
     <a href="/studentClass" class="w3-bar-item w3-button">Class</a>
-    <a href="#" class="w3-bar-item w3-button">Name</a>
+    <a href="/studentName" class="w3-bar-item w3-button">Name</a>
   </div>
 </div>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>&nbsp; Issue Books</a>

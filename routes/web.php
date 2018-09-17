@@ -27,3 +27,5 @@ Route::resource('/booksAuthor','BooksAuthorController');
 Route::resource('/booksRacks','BooksRacksController');
 Route::resource('/booksPublisher','BooksPublisherController');
 Route::resource('/studentClass','StudentClassController');
+Route::resource('/studentName','StudentNameController');
+Route::resource('/students','StudentController');
