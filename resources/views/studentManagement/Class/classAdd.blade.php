@@ -15,7 +15,7 @@
         {!!Form::text('section_name',null,['class'=>'form-control'])!!}
       </div>
       <div class="form-group">
-        {!!Form::submit('Create Author',['class'=>'form-control btn btn-primary'])!!}
+        {!!Form::submit('Create Class',['class'=>'form-control btn btn-primary'])!!}
       </div>
     </div>
 

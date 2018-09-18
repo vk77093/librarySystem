@@ -17,7 +17,7 @@ class CreateRacksTable extends Migration
             $table->increments('id');
             $table->string('rack_name')->index();
             $table->string('sub_racks')->unique();
-            $table->string('rows')->unique()->index();
+            $table->string('rows')->index();
             $table->string('cols');
             $table->timestamps();
         });

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateIssueBooksTable extends Migration
+class CreateReturnBooksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,18 @@ class CreateIssueBooksTable extends Migration
      */
     public function up()
     {
-        Schema::create('issue_books', function (Blueprint $table) {
-            $table->increments('id')->unsigned;
+        Schema::create('return_books', function (Blueprint $table) {
+            $table->increments('return_id');
+            $table->unsignedInteger('id')->default(0);
             $table->integer('book_id');
             $table->integer('student_id');
-            $table->integer('roll_number');
-            $table->integer('rack_id');
+            $table->integer('stu_name');
             $table->integer('publisher_id');
+            $table->integer('roll_number');
             $table->date('return_date');
             $table->timestamps();
+
+            $table->foreign('id')->reference('return_id')->on('issue_books');
         });
     }
 
@@ -32,6 +35,6 @@ class CreateIssueBooksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('issue_books');
+        Schema::dropIfExists('return_books');
     }
 }

@@ -17,6 +17,9 @@ Route::get('/', function () {
 Route::get('/sideBar',function(){
   return view('includes/sidebar');
 });
+Route::get('/logout',function(){
+  return view('welcome');
+});
 
 Auth::routes();
 
@@ -30,3 +33,4 @@ Route::resource('/studentClass','StudentClassController');
 Route::resource('/studentName','StudentNameController');
 Route::resource('/students','StudentController');
 Route::resource('BookIssue','BookIssueController');
+Route::resource('BookReturn','BookReturnController');
