@@ -19,7 +19,8 @@ class BookReturnController extends Controller
      */
     public function index()
     {
-        return view('returnBooks/return');
+      $returnBook=ReturnBook::all();
+        return view('returnBooks/indexView',compact('returnBook'));
     }
 
     /**
@@ -29,14 +30,14 @@ class BookReturnController extends Controller
      */
     public function create()
     {
-      $bookName=IssueBook::pluck('book_id','id')->all();
+      $bookNames=IssueBook::pluck('book_id','id')->all();
       $studenID=IssueBook::pluck('student_id','id')->all();
       $stuName=IssueBook::pluck('stu_name','id')->all();
       $stuRoll=IssueBook::pluck('roll_number','id')->all();
       $pubName=IssueBook::pluck('publisher_id','id')->all();
       $returnDate=IssueBook::pluck('return_date','id')->all();
 
-        return view('returnBooks/return',compact('bookName','studenID','stuName','stuRoll','pubName','returnDate'));
+        return view('returnBooks/return',compact('bookNames','studenID','stuName','stuRoll','pubName','returnDate'));
     }
 
     /**
@@ -48,7 +49,7 @@ class BookReturnController extends Controller
     public function store(Request $request)
     {
       ReturnBook::create($request->all());
-      return redirect('BookReturn');
+      return redirect('/BookReturn');
 
     }
 

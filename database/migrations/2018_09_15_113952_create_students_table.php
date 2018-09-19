@@ -17,7 +17,7 @@ class CreateStudentsTable extends Migration
             $table->increments('id');
            $table->integer('students_class_id');
             $table->integer('students_name_id');
-            $table->integer('contact_number');
+            $table->bigInteger('contact_number');
             $table->timestamps();
         });
     }
