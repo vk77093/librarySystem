@@ -10,7 +10,7 @@ class IssueBook extends Model
       'book_id',
       'student_id',
       'stu_name',
-      'roll_number',
+      'roll_id',
       'rack_id',
       'publisher_id',
       'return_date',

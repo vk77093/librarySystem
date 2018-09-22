@@ -13,7 +13,7 @@ class ReturnBook extends Model
       'student_id',
       'stu_name',
       'publisher_id',
-      'roll_number',
+      'roll_num_id',
       'return_date',
     ];
     public function book(){

@@ -17,8 +17,8 @@
   {!!Form::select('stu_name',[''=>'--Select Student Name--']+$studentName,null,['class'=>'form-control'])!!}
 </div>
 <div class="form-group">
-  {!!Form::label('roll_number','Select Student roll Numner')!!}
-  {!!Form::select('roll_number',[''=>'--Select Roll Number---']+$studentRollNum,null,['class'=>'form-control'])!!}
+  {!!Form::label('roll_id','Select Student roll Numner')!!}
+  {!!Form::select('roll_id',[''=>'--Select Roll Number---']+$studentRollNum,null,['class'=>'form-control'])!!}
 </div>
 <div class="form-group">
   {!!Form::label('rack_id','Select Rack Number')!!}

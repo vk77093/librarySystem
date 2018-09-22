@@ -17,7 +17,7 @@ class CreateIssueBooksTable extends Migration
             $table->increments('id')->unsigned()->index;
             $table->integer('book_id');
             $table->integer('student_id');
-            $table->integer('roll_number');
+            $table->integer('roll_id');
             $table->integer('rack_id');
             $table->integer('publisher_id');
             $table->date('return_date');

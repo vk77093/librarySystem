@@ -25,10 +25,10 @@
       <td>{{$books->book->title}}</td>
       <td>{{$books->student_id}}</td>
       <td>{{$books->student->stu_name}}</td>
-      <td>{{$books->studentRoll->roll_number}}</td>
+      <td>{{$books->student->roll_number}}</td>
       <td>{{$books->publisher->publisher_name}}</td>
       <td>{{$books->issueBooks->return_date}}</td>
-      <td>{{$books->created_at}}</td>
+      <td>{{$books->created_at ? $books->created_at->diffForHumans() :'No Date'}}</td>
     </tr>
 
   </tbody>

@@ -27,7 +27,7 @@
      <td>{{$books->book->title}}</td>
      <td>{{$books->student_id}}</td>
      <td>{{$books->student->stu_name}}</td>
-     <td>{{$books->studentRoll->roll_number}}</td>
+     <td>{{$books->student->roll_number}}</td>
      <td>{{$books->rack->rack_name}}</td>
      <td>{{$books->publisher->publisher_name}}</td>
      <td>{{$books->return_date}}</td>

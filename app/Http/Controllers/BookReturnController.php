@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\ReturnBook;
 use App\Student;
@@ -30,14 +30,19 @@ class BookReturnController extends Controller
      */
     public function create()
     {
-      $bookNames=IssueBook::pluck('book_id','id')->all();
+
+$bookNames=DB::table('booksdata')->pluck('title','book_id')->all();
+
       $studenID=IssueBook::pluck('student_id','id')->all();
-      $stuName=IssueBook::pluck('stu_name','id')->all();
-      $stuRoll=IssueBook::pluck('roll_number','id')->all();
-      $pubName=IssueBook::pluck('publisher_id','id')->all();
+      //$stuName=IssueBook::pluck('stu_name','id')->all();
+      $stuName=DB::table('studentdata')->pluck('stu_name','student_id')->all();
+      //$stuRoll=IssueBook::pluck('roll_number','id')->all();
+      $stuRoll=DB::table('studentrolldata2')->pluck('roll_number','roll_id')->all();
+      //$pubName=IssueBook::pluck('publisher_id','id')->all();
+      $pubName=DB::table('publishersdata')->pluck('publisher_name','publisher_id')->all();
       $returnDate=IssueBook::pluck('return_date','id')->all();
 
-        return view('returnBooks/return',compact('bookNames','studenID','stuName','stuRoll','pubName','returnDate'));
+        return view('returnBooks/return',compact('bookNames','studenID','stuName','stuRoll','pubName','bk','returnDate','returnBook'));
     }
 
     /**
