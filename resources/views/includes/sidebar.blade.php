@@ -47,7 +47,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <a href="#" class="w3-bar-item w3-button">Link</a>
   </div>
 </div> -->
-    <a href="" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>&nbsp; Dashboard</a>
+    <a href="/dashbord" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>&nbsp; Dashboard</a>
 
     <div class="w3-dropdown-hover">
     <button class="w3-button"><i class="fa fa-bank fa-fw"></i>&nbsp;Books Management <i class="fa fa-caret-down"></i></button>

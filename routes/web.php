@@ -24,6 +24,10 @@ Route::get('/logout',function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/dashbord',function(){
+  return view('DashBord/index');
+});
 Route::resource('/books','BookController');
 Route::resource('/bookCategories','BookCategories');
 Route::resource('/booksAuthor','BooksAuthorController');
