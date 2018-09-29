@@ -15,7 +15,7 @@
         <a href="/books">
         <div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
         <div class="w3-right">
-          <h3>52</h3>
+          <h3>{{$booksCount}}</h3>
         </div></a>
         <div class="w3-clear"></div>
         <h4>Books</h4>
@@ -26,7 +26,7 @@
         <a href="/students">
         <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
         <div class="w3-right">
-          <h3>99</h3>
+          <h3>{{$studentCount}}</h3>
         </div></a>
         <div class="w3-clear"></div>
         <h4>Students</h4>
@@ -37,7 +37,7 @@
         <a href="/BookIssue">
         <div class="w3-left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
         <div class="w3-right">
-          <h3>23</h3>
+          <h3>{{$issueBooksCount}}</h3>
         </div></a>
         <div class="w3-clear"></div>
         <h4>Issued Books</h4>
@@ -48,7 +48,7 @@
         <a href="/BookReturn">
         <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
         <div class="w3-right">
-          <h3>50</h3>
+          <h3>{{$returnBookCount}}</h3>
         </div></a>
         <div class="w3-clear"></div>
         <h4>Returned Books</h4>

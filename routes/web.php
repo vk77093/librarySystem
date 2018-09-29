@@ -25,9 +25,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/dashbord',function(){
-  return view('DashBord/index');
-});
+
 Route::resource('/books','BookController');
 Route::resource('/bookCategories','BookCategories');
 Route::resource('/booksAuthor','BooksAuthorController');
@@ -38,3 +36,4 @@ Route::resource('/studentName','StudentNameController');
 Route::resource('/students','StudentController');
 Route::resource('BookIssue','BookIssueController');
 Route::resource('BookReturn','BookReturnController');
+Route::get('/dashbord','AdminController@index');
